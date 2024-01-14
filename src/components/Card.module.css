@@ -1,0 +1,24 @@
+.card {
+  border-radius: 0.625rem;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.12) -120%,
+    rgba(255, 255, 255, 0.04) 239.33%
+  );
+  width: 20rem;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width:325px) {
+  .card {
+    width: 18rem;
+  }
+}
+@media screen and (min-width:925px) {
+  .card {
+    width: 50rem;
+  }
+}
+
+
