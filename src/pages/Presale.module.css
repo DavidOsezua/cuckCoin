@@ -8,7 +8,7 @@
 }
 
 .main > * + * {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 .title {
   font-size: 2rem;

@@ -7,7 +7,7 @@ const PresalePage = () => {
     <div className={`${styles.section}`}>
       <Navbar />
 
-      <main className={`text-center text-[#fff] ${styles.main} mb-[4rem]`}>
+      <main className={`text-center text-[#fff] ${styles.main} `}>
         <h2 className={`${styles.title}`}>BUY CUCK COIN</h2>
 
         <Timer />
@@ -20,17 +20,21 @@ const PresalePage = () => {
             <input type="number" className={`${styles.input}`} />
           </div>
 
-          <select className="text-[#0D0D36] font-bold bg-[#fff] py-[0.5rem] px-[1.2rem] outline-none rounded-md">
-            <option value="BNB" className="text-[#0D0D36]" selected>
-              Token
-            </option>
-            <option value="USDT" className="text-[#0D0D36]">
-              USDT
-            </option>
-            <option value="BUSD" className="text-[#0D0D36]">
-              BUSD
-            </option>
-          </select>
+          <div className="flex gap-[0.5rem] items-center">
+            <p className="text-[0.9rem] font-bold">Balance : 0.0</p>
+
+            <select className="text-[#0D0D36] font-bold bg-[#fff] py-[0.5rem] px-[1.2rem] outline-none rounded-md">
+              <option value="BNB" className="text-[#0D0D36]" selected>
+                Token
+              </option>
+              <option value="USDT" className="text-[#0D0D36]">
+                USDT
+              </option>
+              <option value="BUSD" className="text-[#0D0D36]">
+                BUSD
+              </option>
+            </select>
+          </div>
         </Card>
 
         <h2 className="text-[#fff]">
@@ -47,15 +51,13 @@ const PresalePage = () => {
 
           <select className="text-[#0D0D36] bg-[#fff] font-bold py-[0.5rem] px-[1.2rem] rounded-md">
             <option value="BUSD" className="text-[#FFF]">
-              PEPMAS
+              CUCK
             </option>
           </select>
         </Card>
 
         <button className={styles.button}>Connect Wallet</button>
       </main>
-
-      <Footer />
     </div>
   );
 };

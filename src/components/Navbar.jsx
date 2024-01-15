@@ -10,10 +10,7 @@ const Navbar = () => {
       <nav className={`${styles.navContainer}`}>
         <img src={logo} alt="Logo" className={styles.logo} />
         <div className="flex items-center gap-[3px]">
-          <a
-            href="http://christmaspepe.com/"
-            className="text-[#fff] text-[300]"
-          >
+          <a href="/" className="text-[#fff] text-[300]">
             {" "}
             Back Home{" "}
           </a>

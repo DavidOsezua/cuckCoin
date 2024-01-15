@@ -6,7 +6,8 @@
 }
 
 .box {
-  border-radius: 2.0625rem;
+  border-radius: 0.8625rem;
+
   border: 5px solid #0287fa;
   background: linear-gradient(
     180deg,
