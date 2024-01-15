@@ -21,24 +21,23 @@ const PresalePage = () => {
           </div>
 
           <div className="flex gap-[0.5rem] items-center">
-            <p className="text-[0.9rem] font-bold">Balance : 0.0</p>
+            <p className="text-[0.9rem] font-bold text-[#000]">
+              Balance : 0.0
+            </p>
 
             <select className="text-[#0D0D36] font-bold bg-[#fff] py-[0.5rem] px-[1.2rem] outline-none rounded-md">
               <option value="BNB" className="text-[#0D0D36]" selected>
                 Token
               </option>
               <option value="USDT" className="text-[#0D0D36]">
-                USDT
-              </option>
-              <option value="BUSD" className="text-[#0D0D36]">
-                BUSD
+                SOLANA
               </option>
             </select>
           </div>
         </Card>
 
-        <h2 className="text-[#fff]">
-          1 USDT = <span>1000 </span> Cuck
+        <h2 className="text-[#000] font-bold">
+          1 USDT = <span className="font-bold">1000 </span> Cuck
         </h2>
 
         <Card

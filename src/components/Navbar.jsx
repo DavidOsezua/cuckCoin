@@ -17,7 +17,7 @@ const Navbar = () => {
           <img src={linkArrow} />
         </div>
         <button
-          className={` px-2 bg-[#0AA7FF] rounded-[3px] 
+          className={` px-2 bg-[#FF1F00] rounded-[3px] 
  text-[#fff] ${styles.btn}`}
         >
           Connect Wallet

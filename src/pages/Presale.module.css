@@ -1,6 +1,6 @@
 .section {
   min-height: 100vh;
-  background: #0d0d36;
+  background: linear-gradient(180deg, #ff8024 0%, #70b2d4 100%);
 }
 .main {
   margin-top: 5rem;
@@ -18,12 +18,8 @@
 .input {
   width: 5rem;
   height: 2rem;
-  background: linear-gradient(
-    180deg,
-    rgba(217, 217, 217, 0.2) 0%,
-    rgba(217, 217, 217, 0.1) 100%
-  );
-  color: #fff;
+  background: #ff6f06;
+  color: #000;
   outline: none;
   border: none;
   padding: 0.5rem;
@@ -31,10 +27,14 @@
 
 .button {
   border-radius: 0.3125rem;
-  background: linear-gradient(180deg, #0aa7ff 0%, rgba(13, 13, 54, 0.59) 100%);
+  background: #ff1f00;
   padding: 8px 16px;
   width: 40%;
   margin-bottom: 2rem;
+}
+
+.title {
+  color: #d9d9d9;
 }
 @media screen and (max-width: 325px) {
   .title {
@@ -44,5 +44,10 @@
 @media screen and (min-width: 925px) {
   .main {
     margin-top: 1rem;
+  }
+
+  .input {
+    width: 10rem;
+    height: 2rem;
   }
 }
