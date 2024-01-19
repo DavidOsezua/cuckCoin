@@ -1,11 +1,20 @@
-import { useEffect, useState } from "react";
 import styles from "./Presale.module.css";
-import { Navbar, Timer, Footer, Card } from "../components";
+import { Timer, Card } from "../components";
+import { useConnection, useWallet } from "@solana/wallet-adapter-react";
+import { useState } from "react";
+
 
 const PresalePage = () => {
+
+  const [presaleState, setState] = useState({sendAmount: 0, receiveAmount: 0});
+  const quotePrice = 0.003/94;
+
+  const handleTokenBuy = () => {
+    console.log(`I'm sending ${presaleState.sendAmount} sol and recieving ${presaleState.receiveAmount} CUCK Tokens`)
+  }
+
   return (
     <div className={`${styles.section}`}>
-      <Navbar />
 
       <main className={`text-center text-[#fff] ${styles.main} `}>
         <h2 className={`${styles.title}`}>BUY CUCK COIN</h2>
@@ -17,7 +26,7 @@ const PresalePage = () => {
         >
           <div className={`flex flex-col`}>
             <label>You Send</label>
-            <input type="number" className={`${styles.input}`} />
+            <input type="number" className={`${styles.input}`} value={presaleState.sendAmount} onChange={(e) => setState({sendAmount: e.target.value, receiveAmount: e.target.value / quotePrice})} />
           </div>
 
           <div className="flex gap-[0.5rem] items-center">
@@ -26,10 +35,7 @@ const PresalePage = () => {
             </p>
 
             <select className="text-[#0D0D36] font-bold bg-[#fff] py-[0.5rem] px-[1.2rem] outline-none rounded-md">
-              <option value="BNB" className="text-[#0D0D36]" selected>
-                Token
-              </option>
-              <option value="USDT" className="text-[#0D0D36]">
+              <option value="SOL" className="text-[#0D0D36]" selected>
                 SOLANA
               </option>
             </select>
@@ -37,7 +43,7 @@ const PresalePage = () => {
         </Card>
 
         <h2 className="text-[#000] font-bold">
-          1 USDT = <span className="font-bold">1000 </span> Cuck
+          1 CUCK = <span className="font-bold">USD 0.003 </span>
         </h2>
 
         <Card
@@ -45,17 +51,16 @@ const PresalePage = () => {
         >
           <div className={`flex flex-col`}>
             <label>You Receive</label>
-            <input type="text" className={`${styles.input}`} />
+            <input type="text" className={`${styles.input}`} value={presaleState.receiveAmount} onChange={(e) => setState({sendAmount: e.target.value * quotePrice, receiveAmount: e.target.value})} />
           </div>
 
           <select className="text-[#0D0D36] bg-[#fff] font-bold py-[0.5rem] px-[1.2rem] rounded-md">
-            <option value="BUSD" className="text-[#FFF]">
+            <option value="CUCK" className="text-[#FFF]" selected>
               CUCK
             </option>
           </select>
         </Card>
-
-        <button className={styles.button}>Connect Wallet</button>
+        <button className={styles.button} onClick={handleTokenBuy}>Buy</button>
       </main>
     </div>
   );

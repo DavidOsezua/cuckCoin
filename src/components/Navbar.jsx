@@ -1,9 +1,8 @@
-import { useState } from "react";
 import styles from "./Navbar.module.css";
 import { logo, linkArrow } from "../assets";
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 const Navbar = () => {
-  const [navbar, setNavbar] = useState(false);
 
   return (
     <header className={`${styles.header}`}>
@@ -16,12 +15,7 @@ const Navbar = () => {
           </a>
           <img src={linkArrow} />
         </div>
-        <button
-          className={` px-2 bg-[#FF1F00] rounded-[3px] 
- text-[#fff] ${styles.btn}`}
-        >
-          Connect Wallet
-        </button>
+        <WalletMultiButton style={{backgroundColor: '#512da8'}}/>
       </nav>
     </header>
   );
