@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { twoDots } from '../assets';
 import styles from './Timer.module.css';
 
-const COUNTDOWN_TARGET = new Date('2023-12-25T23:59:59');
+const COUNTDOWN_TARGET = new Date('2024-01-25T23:59:59');
 
 const getTimeLeft = () => {
   const totalTimeLeft = COUNTDOWN_TARGET - new Date();
@@ -10,7 +10,8 @@ const getTimeLeft = () => {
   const hours = Math.floor((totalTimeLeft / (1000 * 60 * 60)) % 24);
   const minutes = Math.floor((totalTimeLeft / (1000 * 60)) % 60);
   const seconds = Math.floor((totalTimeLeft / 1000) % 60);
-  return {days, hours, seconds };
+  //console.log(`Days - ${days}, Hours - ${hours}, Minutes - ${minutes}, Seconds - ${seconds}`)
+  return {days, hours, minutes, seconds };
 };
 
 const Timer = () => {
@@ -33,7 +34,7 @@ const Timer = () => {
           <div key={label}>
             <div className='flex items-center gap-[10px] justify-center'>
               <div className={styles.box}>
-                <span className={styles.value}>00</span>
+                <span className={styles.value}>{value}</span>
               </div>
               {i < Object.entries(timeLeft).length - 1 && (
                 <img src={twoDots} className='w-[10px]' alt='dots' />
