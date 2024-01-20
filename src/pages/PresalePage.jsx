@@ -54,8 +54,9 @@ const PresalePage = () => {
           const tokenBalance = await getTokenBalance(userTokenAccount.address, connection);
           const solBalance = await getSolBalance(connection, publicKey);
           setUserBalance({cuck: tokenBalance, sol: solBalance});
-        } catch {
-          toast.error("Error fetching user balances..")
+          toast.success("Account fetched succesfully !");
+        } catch (e) {
+          toast.error(`Error fetching user balances: ${e}`)
         }
       }
       if (publicKey) {
@@ -119,7 +120,7 @@ const PresalePage = () => {
       toast.success("Token Bought Succesfully !");
     } catch (e) {
       console.log(e)
-      toast.error("An Error Occurred !");
+      toast.error(`An Error Occurred !: Error ${e}`);
     }
   }
 
