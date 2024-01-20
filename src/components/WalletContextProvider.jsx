@@ -6,9 +6,13 @@ import * as walletAdapterWallets from '@solana/wallet-adapter-wallets';
 import '@solana/wallet-adapter-react-ui/styles.css';
 
 const WalletContextProvider = ({ children }) => {
-    const network = WalletAdapterNetwork.Mainnet;
+    const network = WalletAdapterNetwork.Devnet;
     const endpoint = web3.clusterApiUrl(network)
-    const wallets = [new walletAdapterWallets.PhantomWalletAdapter()]
+    const wallets = [
+        new walletAdapterWallets.PhantomWalletAdapter(), 
+        new walletAdapterWallets.SafePalWalletAdapter(),
+        new walletAdapterWallets.TrustWalletAdapter()
+    ]
 	return (
         <ConnectionProvider endpoint={endpoint}>
             <WalletProvider wallets={wallets}>
