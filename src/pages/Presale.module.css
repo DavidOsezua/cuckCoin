@@ -3,6 +3,7 @@
   background: linear-gradient(180deg, #ff8024 0%, #70b2d4 100%);
 }
 .main {
+  padding-top: 5rem;
   overflow: hidden;
 }
 
@@ -42,7 +43,7 @@
 }
 @media screen and (min-width: 925px) {
   .main {
-    margin-top: 1rem;
+    padding-top: 1rem;
   }
 
   .input {
