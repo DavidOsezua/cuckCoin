@@ -9,7 +9,7 @@ import {
   TOKEN_PROGRAM_ID,
 } from "@solana/spl-token";
 import { Buffer } from "buffer/";
-import * as BN from "bn.js";
+import BN from "bn.js";
 import {
     Connection,
     PublicKey,
