@@ -1,12 +1,10 @@
-import React from "react";
 import "./ConnectPage.css";
 import { connectLogo } from "../assets";
-import { NavLink } from "react-router-dom";
 
 const ConnectPage = () => {
   return (
     <>
-      <header className="header">
+      {/*<header className="header">
         <nav className="navContainer">
           <div>
             <NavLink to="/">
@@ -16,7 +14,7 @@ const ConnectPage = () => {
 
           <button className="btnHeader">Connect</button>
         </nav>
-      </header>
+      </header>*/}
 
       <main>
         <section className="section">

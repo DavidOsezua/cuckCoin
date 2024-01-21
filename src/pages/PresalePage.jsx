@@ -1,7 +1,6 @@
 import styles from "./Presale.module.css";
 import { Timer, Card } from "../components";
 import { useWallet } from "@solana/wallet-adapter-react";
-import {Navbar }from "../components";
 import { useEffect, useMemo, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -150,8 +149,6 @@ const PresalePage = () => {
 
   return (
     <>
-      <Navbar />
-
       <div className={`${styles.section}`}>
         <main className={`text-center text-[#fff] ${styles.main} `}>
           <h2 className={`${styles.title}`}>BUY CUCK COIN</h2>

@@ -1,5 +1,6 @@
 import PresalePage from "./pages/PresalePage";
 import WalletContextProvider from "./components/WalletContextProvider";
+import { Navbar } from "./components";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
@@ -13,6 +14,7 @@ const App = () => {
     <>
       <BrowserRouter>
         <WalletContextProvider>
+          <Navbar />
           <Routes>
             <Route path="/" element={<PresalePage />} />
             <Route path="/initpresale" element={<ConnectPage />} />
