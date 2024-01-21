@@ -1,6 +1,7 @@
 import { TOKEN_PROGRAM_ID, ASSOCIATED_TOKEN_PROGRAM_ID, AccountLayout } from '@solana/spl-token'
 import { PublicKey, Transaction, TransactionInstruction, SystemProgram, SYSVAR_RENT_PUBKEY, LAMPORTS_PER_SOL } from '@solana/web3.js'
 import { PRESALE_TOKEN_DECIMALS } from './constants'
+import * as BufferLayout from "buffer-layout";
 
 export async function getAssociatedTokenAddress(
     mint,
@@ -146,6 +147,22 @@ export async function getOrCreateAssociatedTokenAccount(
 
     return account
 }
+
+const publicKey = (property = "publicKey") => {
+    return BufferLayout.blob(32, property);
+};
+
+const uint64 = (property = "uint64") => {
+    return BufferLayout.blob(8, property);
+};
+
+export const PRESALE_ACCOUNT_DATA_LAYOUT = BufferLayout.struct([
+    BufferLayout.u8("isInitialized"),
+    publicKey("ownerPubkey"),
+    publicKey("tokenAccountPubkey"),
+    uint64("tokenPrice"),
+    uint64("startTs"),
+]);
 
 export function formatAmount(amount, decimal) {
     return amount/(10**decimal)
