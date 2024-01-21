@@ -15,7 +15,7 @@ const App = () => {
         <WalletContextProvider>
           <Routes>
             <Route path="/" element={<PresalePage />} />
-            <Route path="/connect" element={<ConnectPage />} />
+            <Route path="/initpresale" element={<ConnectPage />} />
           </Routes>
           <ToastContainer />
         </WalletContextProvider>
