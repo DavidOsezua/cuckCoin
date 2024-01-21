@@ -15,9 +15,8 @@ const Navbar = () => {
           </a>
           <img src={linkArrow} />
         </div>
-        <NavLink to="/connect">
-          <WalletMultiButton style={{ backgroundColor: "#512da8" }} />
-        </NavLink>
+
+        <WalletMultiButton style={{ backgroundColor: "#512da8" }} />
       </nav>
     </header>
   );
