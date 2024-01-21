@@ -1,5 +1,6 @@
 import styles from "./Navbar.module.css";
 import { logo, linkArrow } from "../assets";
+import { NavLink } from "react-router-dom";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 const Navbar = () => {
@@ -14,7 +15,9 @@ const Navbar = () => {
           </a>
           <img src={linkArrow} />
         </div>
-        <WalletMultiButton style={{ backgroundColor: "#512da8" }} />
+        <NavLink to="/connect">
+          <WalletMultiButton style={{ backgroundColor: "#512da8" }} />
+        </NavLink>
       </nav>
     </header>
   );
