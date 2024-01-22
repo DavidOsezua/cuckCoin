@@ -1,5 +1,5 @@
 import styles from "./Presale.module.css";
-import { Timer, Card } from "../components";
+import { Card } from "../components";
 import { useWallet } from "@solana/wallet-adapter-react";
 import { useEffect, useMemo, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
@@ -153,7 +153,7 @@ const PresalePage = () => {
         <main className={`text-center text-[#fff] ${styles.main} `}>
           <h2 className={`${styles.title}`}>BUY CUCK COIN</h2>
 
-          <Timer />
+          {/*<Timer />*/}
 
           <Card
             className={`flex justify-between px-[1rem] py-[0.8rem] items-center`}
