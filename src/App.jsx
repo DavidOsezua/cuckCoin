@@ -7,7 +7,7 @@ import "./App.css";
 import { ToastContainer } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
-import ConnectPage from "./components/ConnectPage";
+import InitPresalePage from "./pages/InitPresalePage";
 
 const App = () => {
   return (
@@ -17,7 +17,7 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<PresalePage />} />
-            <Route path="/initpresale" element={<ConnectPage />} />
+            <Route path="/initpresale" element={<InitPresalePage />} />
           </Routes>
           <ToastContainer />
         </WalletContextProvider>
