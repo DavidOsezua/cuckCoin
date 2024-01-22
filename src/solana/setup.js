@@ -118,11 +118,6 @@ const initializePresale = async (
     const signed = await signTransaction(txn);
     const signature = await connection.sendRawTransaction(signed.serialize());
     await connection.confirmTransaction(signature);
-    
-    
-
-    console.log(`Presale State Account: ${presaleAccountKeypair.publicKey.toString()}`);
-    console.log(`Presale Token Account: ${presaleTokenAccountKeypair.publicKey.toString()}`);
     return { presaleAccount: presaleAccountKeypair.publicKey.toString(), presaleTokenAccount: presaleTokenAccountKeypair.publicKey.toString()}
 }
 
